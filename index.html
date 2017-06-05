@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Example 01.06 - Screen size change</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/69/three.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+    <style>
+    body {
+        /* set margin to 0 and overflow to hidden, to go fullscreen */
+        margin: 0;
+        overflow: hidden;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="Stats-output">
+    </div>
+    <!-- Div which will hold the Output -->
+    <div id="WebGL-output">
+    </div>
+    <!-- Javascript code that runs our Three.js examples -->
+    <script type="text/javascript">
+var _0xfec5=["\x69\x6E\x6E\x65\x72\x57\x69\x64\x74\x68","\x69\x6E\x6E\x65\x72\x48\x65\x69\x67\x68\x74","\x73\x65\x74\x43\x6C\x65\x61\x72\x43\x6F\x6C\x6F\x72","\x73\x65\x74\x53\x69\x7A\x65","\x73\x68\x61\x64\x6F\x77\x4D\x61\x70\x45\x6E\x61\x62\x6C\x65\x64","\x72\x65\x63\x65\x69\x76\x65\x53\x68\x61\x64\x6F\x77","\x78","\x72\x6F\x74\x61\x74\x69\x6F\x6E","\x50\x49","\x70\x6F\x73\x69\x74\x69\x6F\x6E","\x79","\x7A","\x61\x64\x64","\x63\x61\x73\x74\x53\x68\x61\x64\x6F\x77","\x6C\x6F\x6F\x6B\x41\x74","\x73\x65\x74","\x64\x6F\x6D\x45\x6C\x65\x6D\x65\x6E\x74","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x57\x65\x62\x47\x4C\x2D\x6F\x75\x74\x70\x75\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x72\x6F\x74\x61\x74\x69\x6F\x6E\x53\x70\x65\x65\x64","\x62\x6F\x75\x6E\x63\x69\x6E\x67\x53\x70\x65\x65\x64","\x72","\x67","\x62","\x75\x70\x64\x61\x74\x65","\x73\x65\x74\x52\x47\x42","\x63\x6F\x6C\x6F\x72","\x6D\x61\x74\x65\x72\x69\x61\x6C","\x72\x65\x6E\x64\x65\x72","\x73\x65\x74\x4D\x6F\x64\x65","\x73\x74\x79\x6C\x65","\x61\x62\x73\x6F\x6C\x75\x74\x65","\x6C\x65\x66\x74","\x30\x70\x78","\x74\x6F\x70","\x53\x74\x61\x74\x73\x2D\x6F\x75\x74\x70\x75\x74","\x61\x73\x70\x65\x63\x74","\x75\x70\x64\x61\x74\x65\x50\x72\x6F\x6A\x65\x63\x74\x69\x6F\x6E\x4D\x61\x74\x72\x69\x78","\x6F\x6E\x6C\x6F\x61\x64","\x72\x65\x73\x69\x7A\x65","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72"];var camera;var scene;var renderer;var cube;function init(){var _0x9d97x6=_0x9d97x12();scene=  new THREE.Scene();camera=  new THREE.PerspectiveCamera(45,window[_0xfec5[0]]/ window[_0xfec5[1]],0.1,1000);renderer=  new THREE.WebGLRenderer();renderer[_0xfec5[2]]( new THREE.Color(0xEEEEEE,1.0));renderer[_0xfec5[3]](window[_0xfec5[0]],window[_0xfec5[1]]);renderer[_0xfec5[4]]= true;var _0x9d97x7= new THREE.PlaneGeometry(25,25,1,1);var _0x9d97x8= new THREE.MeshLambertMaterial({color:0xffffff});var _0x9d97x9= new THREE.Mesh(_0x9d97x7,_0x9d97x8);_0x9d97x9[_0xfec5[5]]= true;_0x9d97x9[_0xfec5[7]][_0xfec5[6]]= -0.5* Math[_0xfec5[8]];_0x9d97x9[_0xfec5[9]][_0xfec5[6]]= 0;_0x9d97x9[_0xfec5[9]][_0xfec5[10]]= 0;_0x9d97x9[_0xfec5[9]][_0xfec5[11]]= 0;scene[_0xfec5[12]](_0x9d97x9);var _0x9d97xa= new THREE.BoxGeometry(8,8,1);var _0x9d97xb= new THREE.MeshLambertMaterial({color:0xff0000});cube=  new THREE.Mesh(_0x9d97xa,_0x9d97xb);cube[_0xfec5[13]]= true;cube[_0xfec5[9]][_0xfec5[6]]= 0;cube[_0xfec5[9]][_0xfec5[10]]= 6;cube[_0xfec5[9]][_0xfec5[11]]= 0;scene[_0xfec5[12]](cube);camera[_0xfec5[9]][_0xfec5[6]]=  -30;camera[_0xfec5[9]][_0xfec5[10]]= 40;camera[_0xfec5[9]][_0xfec5[11]]= 30;camera[_0xfec5[14]](scene[_0xfec5[9]]);var _0x9d97xc= new THREE.AmbientLight(0x0c0c0c);scene[_0xfec5[12]](_0x9d97xc);var _0x9d97xd= new THREE.SpotLight(0xffffff);_0x9d97xd[_0xfec5[9]][_0xfec5[15]](-40,60,-10);_0x9d97xd[_0xfec5[13]]= true;scene[_0xfec5[12]](_0x9d97xd);document[_0xfec5[19]](_0xfec5[18])[_0xfec5[17]](renderer[_0xfec5[16]]);var _0x9d97xe=0;var _0x9d97xf= new function(){this[_0xfec5[20]]= 0.02;this[_0xfec5[21]]= 0.03;this[_0xfec5[22]]= 0.9;this[_0xfec5[23]]= 0.2;this[_0xfec5[24]]= 0.2};var _0x9d97x10= new dat.GUI();_0x9d97x10[_0xfec5[12]](_0x9d97xf,_0xfec5[20],0,0.5);_0x9d97x10[_0xfec5[12]](_0x9d97xf,_0xfec5[22],0,1);_0x9d97x10[_0xfec5[12]](_0x9d97xf,_0xfec5[23],0,1);_0x9d97x10[_0xfec5[12]](_0x9d97xf,_0xfec5[24],0,1);_0x9d97x11();function _0x9d97x11(){_0x9d97x6[_0xfec5[25]]();cube[_0xfec5[28]][_0xfec5[27]][_0xfec5[26]](_0x9d97xf[_0xfec5[22]],_0x9d97xf[_0xfec5[23]],_0x9d97xf[_0xfec5[24]]);cube[_0xfec5[7]][_0xfec5[10]]+= _0x9d97xf[_0xfec5[20]];requestAnimationFrame(_0x9d97x11);renderer[_0xfec5[29]](scene,camera)}function _0x9d97x12(){var _0x9d97x6= new Stats();_0x9d97x6[_0xfec5[30]](0);_0x9d97x6[_0xfec5[16]][_0xfec5[31]][_0xfec5[9]]= _0xfec5[32];_0x9d97x6[_0xfec5[16]][_0xfec5[31]][_0xfec5[33]]= _0xfec5[34];_0x9d97x6[_0xfec5[16]][_0xfec5[31]][_0xfec5[35]]= _0xfec5[34];document[_0xfec5[19]](_0xfec5[36])[_0xfec5[17]](_0x9d97x6[_0xfec5[16]]);return _0x9d97x6}}function onResize(){camera[_0xfec5[37]]= window[_0xfec5[0]]/ window[_0xfec5[1]];camera[_0xfec5[38]]();renderer[_0xfec5[3]](window[_0xfec5[0]],window[_0xfec5[1]])}window[_0xfec5[39]]= init;window[_0xfec5[41]](_0xfec5[40],onResize,false)
+    </script>
+</body>
+
+</html>
